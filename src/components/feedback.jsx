@@ -6,7 +6,9 @@ class Feedback extends React.Component {
     state = {
         value: 5
     }
-handleIncrement =() =>{}
+handleIncrement =() =>{
+    this.setState({value:10})
+}
     render() {
         return (
             <div className={styled.mainDiv}>
