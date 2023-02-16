@@ -1,6 +1,6 @@
 import React from "react";
-import './feeback.module.css'
-
+import styled from './Feedback.module.css'
+export
 class Feedback extends React.Component {
 
     constructor() {
