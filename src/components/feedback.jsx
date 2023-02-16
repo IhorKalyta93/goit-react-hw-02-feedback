@@ -3,20 +3,19 @@ import styled from './Feedback.module.css'
 export
 class Feedback extends React.Component {
 
-    constructor() {
-        super()
-        this.state = {
-            value: 0,
-        }
-}
+    state = {
+        value: 5
+    }
 handleIncrement =() =>{}
     render() {
         return (
-            <div>
-                <span>Значение</span>
+            <div className={styled.mainDiv}>
+                <span>{this.state.value}</span>
                 <div><button type="button" onClick={this.handleIncrement}>Добавить</button></div>
             </div>
         )
     }
     
-}
+};
+;
+export default Feedback;

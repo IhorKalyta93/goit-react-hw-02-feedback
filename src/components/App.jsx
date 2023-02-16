@@ -1,10 +1,11 @@
 import Feedback from "./Feedback"
 
 
-export const App = () => {
-  return (
+export const App = () => (
+   <>
     <Feedback  />
   
-  );
-};
+  </>
+);
 
+export default App;
