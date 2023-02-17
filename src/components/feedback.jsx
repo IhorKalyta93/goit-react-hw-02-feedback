@@ -4,7 +4,7 @@ export class Feedback extends React.Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0,
+      bad: 0,
   };
   handleIncrementGood = () => {
     this.setState(prevState => ({
@@ -20,7 +20,15 @@ export class Feedback extends React.Component {
     this.setState(prevState => ({
       bad: prevState.bad + 1,
     }));
-  };
+    };
+   
+    countTotalFeedback = () => this.state.good + this.state.neutral + this.state.bad;
+
+    countPositiveFeedbackPercentage=() => Math.floor((this.state.good*100)/this.countTotalFeedback())
+        
+    
+    
+    
   render() {
     return (
       <div className={styled.mainDiv}>
@@ -28,7 +36,9 @@ export class Feedback extends React.Component {
         <div className={styled.divResults}>
           <span className={styled.span}>Good: {this.state.good}</span>
           <span className={styled.span}>Neutral: {this.state.neutral}</span>
-          <span className={styled.span}>Bad: {this.state.bad}</span>
+                <span className={styled.span}>Bad: {this.state.bad}</span>
+                <span className={styled.span}>Total: {this.countTotalFeedback()} </span>
+                <span className={styled.span}>Percentage: {this.countPositiveFeedbackPercentage()}% </span>
         </div>
         <div className={styled.divButtons}>
           <button
