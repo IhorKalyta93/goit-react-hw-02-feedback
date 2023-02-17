@@ -1,6 +1,27 @@
 .mainDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  flex-direction: column;
+}
+.divResults {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.divButtons {
+  padding-top: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.span {
+}
+.button {
+    padding: 5px;
+    background-color: rgb(197, 255, 253);
+    border-radius: 20%;
 }
